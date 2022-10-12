@@ -1,0 +1,200 @@
+#bodyIndex {
+    @include reset;
+    @include gridIndex;
+    width: auto;
+    height: 230vh;
+    background-color: black;
+    font-family: $roboto;
+
+}
+
+#headerIndex {
+    grid-area: h1;
+}
+
+#mainIndex {
+    @include grillaMainIndex;
+    grid-area: m1;
+
+
+    h2 {
+        color: white;
+        text-align: center;
+    }
+
+    #sectionArrivals {
+        grid-area: sA;
+
+        img {
+            width: 100%;
+
+        }
+    }
+
+    #sectionMetodos {
+        grid-area: sM;
+        background-color: $backgroundbox;
+        width: 100%;
+        height: 15vh;
+        margin-top: 5em;
+        @include flexNav;
+        box-shadow: $boxshadow;
+
+        div {
+            display: flex;
+            align-items: center;
+
+            a i {
+                font-size: 1.5em;
+                color: black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+
+        .metodoButton {
+            background-color: $backgroundbox;
+            height: 3em;
+            border: none;
+            font-size: 1em;
+
+            &:hover {
+                background-color: $backgroundboxbotton;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    #sectionImagenesIndex {
+        grid-area: sI;
+        margin-top: 3em;
+        @include grillaSectionImgIndex;
+
+        img {
+            width: 90%;
+            max-height: 100%;
+            padding: 1em;
+        }
+
+        .newIn {
+            grid-area: nI;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        .imgSectionIndex1 {
+            grid-area: i1;
+        }
+
+        .imgSectionIndex2 {
+            grid-area: i2;
+        }
+
+        .imgSectionIndex3 {
+            grid-area: i3;
+        }
+    }
+
+    #asideIndex {
+        grid-area: aS;
+        margin-top: 5em;
+
+        p {
+            font-family: $rubik;
+            font-size: 3em;
+            color: white;
+            border: 2px;
+            text-align: center;
+            text-shadow: $neon;
+            animation: parpadear 3s infinite backwards steps(4);
+        }
+
+        @keyframes parpadear {
+            to {
+                color: deeppink;
+            }
+
+        }
+    }
+}
+
+#footerIndex {
+    grid-area: f1;
+}
+
+@media (max-width: 768px) {
+
+    #bodyIndex {
+        height: 100%;
+        @include gridAuto;
+
+        #mainIndex {
+            display: flex;
+            flex-direction: column;
+
+            #sectionMetodos {
+                height: 15vh;
+
+            }
+
+            #sectionImagenesIndex {
+
+            }
+
+            #asideIndex {
+                margin: 0;
+            }
+        }
+
+        #footerIndex {
+            .footerPages {
+                height: auto;
+            }
+        }
+
+
+    }
+
+    #footerIndex {
+        height: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    #bodyIndex {
+        @include gridAuto;
+
+        #mainIndex {
+            #sectionMetodos {
+                height: auto;
+                font-size: .8em;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            #sectionImagenesIndex {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                font-size: .8em;
+
+                div img {
+                    height: auto;
+                }
+            }
+
+        }
+
+        #footerIndex {
+            grid-template-rows: 1fr 2fr;
+            grid-template-columns: 1fr;
+
+        }
+
+    }
+
+}

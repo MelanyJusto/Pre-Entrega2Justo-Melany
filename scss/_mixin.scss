@@ -1,0 +1,142 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin wyh{
+    width: 100vw;
+    height: 100vh;
+}
+// mixin grillas
+@mixin gridIndex{
+    display: grid;
+    grid-template-rows: 18% 100% 15%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "h1"
+                          "m1"
+                          "f1";
+}
+@mixin gridHeader{
+    display: grid;
+    grid-template-rows: 70% 5% 25%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "banner "
+                         "bars "
+                         "menuNav ";
+}
+@mixin grillaMainIndex{
+    display: grid;
+    grid-template-rows: 40% 15% 35% ;
+    grid-template-columns: 1fr 3fr ;
+    grid-template-areas:"sA sA"
+                         " sM sM"
+                         "aS sI" ;
+}
+@mixin grillaSectionImgIndex {
+    display: grid;
+    grid-template-rows: .5fr 3fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "nI nI nI"
+                          "i3 i2 i1";
+    
+}
+@mixin foooterPages{
+    display: grid;
+    grid-template-rows: .5fr 3fr .5fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "ft ft ft"
+                          "fm fm fm "
+                          "fb fb fb"
+}
+@mixin gridAuto{
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+@mixin grillaProductos{
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "hpro"
+                          "mpro"
+                         "fpro";
+}
+@mixin grillaPagos{
+    display: grid;
+    grid-template-rows: 17% 75% 13%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "hp"
+                         "mp"
+                         "fp";
+}
+@mixin grillaSucursal{
+    display: grid;
+    grid-template-rows: 17% 75% 13%;
+    grid-auto-columns: 1fr ;
+    grid-template-areas: "hS"
+                         "mS"
+                         "fS" ;
+}
+@mixin grillaContacto{
+    display: grid;
+    grid-template-rows: 15% 70% 15%;
+    grid-auto-columns: 1fr ;
+    grid-template-areas: "hC"
+                         "mC"
+                         "fC" ;
+}
+@mixin grillaRegistro{
+    display: grid;
+    grid-template-rows: 15% 70% 15%;
+    grid-auto-columns: 1fr ;
+    grid-template-areas: "hR"
+                         "mR"
+                         "fR" ;
+}
+
+// mixin flex
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// mixin headers
+@mixin navegador {
+    li {
+        position: relative;
+
+        &::before {
+            content: "";
+            height: 2px;
+            width: 0%;
+            background-color: white;
+            position: absolute;
+            transition: 0.4s ease-out;
+            left: 0;
+            bottom: -10px;
+        }
+
+        &:hover::before {
+            width: 100%;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+@mixin flexNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin imgIndex{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    &:hover{
+        padding: .2em;
+    }
+}

@@ -1,0 +1,76 @@
+#bodyProductos{
+    @include reset;
+    @include grillaProductos;
+    width: auto;
+    height: 360vh;
+    background-color: black;
+    font-family: $roboto;
+
+    #headerProductos {
+        grid-area: hpro;
+    }
+    #mainProductos{
+        grid-area: mpro;
+        padding: ($padding*3);
+        section{
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            div{
+                padding: $padding;
+                height: auto;
+                h4 {
+                    margin: 0;
+                    text-align: center;
+                    color: rgb(245, 177, 240);
+                }
+                
+                h6 {
+                    margin: 0;
+                    text-align: center;
+                    color: white;
+                }
+            }
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+    #footerProductos{
+        grid-area: fpro;
+    }
+
+}
+@media (max-width: 768px){
+    #bodyProductos{
+        @include gridAuto;
+        height: auto;
+        header{
+            height: 50px;
+        }
+        main{
+            max-height: fit-content;
+    
+            section{
+                div{
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 320px){
+    #bodyProductos{
+        main{
+            section{
+                div{
+                    height: 150px;
+                    img{
+                        max-height: max-content;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -5,54 +5,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mystic Clothing</title>
+    <meta name="keywords" content=" INDUMENTARIA FEMENINA ROPA MUJER ENVIOS GRATIS CUOTAS MODA MYSTIC CLOTHING ">
+    <meta name="description" content="Registrate para recibir ofertas exclusivas!! La ropa que mas te gusta a un solo click de distancia">
+    <title>Registrate</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/5f8b5b5000.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="bodyRegistro">
     <header id="headerRegistro" class="headerPages">
-        <div class="divNavBanner">
-            <img class="bannerMystic" src="../assets/images/MYSTIC.jpg"
-                alt="Mistyc Clothing banner negro letras fucsia">
-        </div>
-        <nav class="contenedorBotton">
-            <div class="navLeft">
-                <ul>
-                    <li>
-                        <a class="bottonNav" href="../index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class="bottonNav" href="./productos.html">Productos</a>
-                    </li>
-                    <li>
-                        <a class="bottonNav" href="./formapago.html">Metodos de pago</a>
-                    </li>
-                    <li>
-                        <a class="bottonNav" href="./sucursalenvio.html">Sucursales</a>
-                    </li>
-                    <li>
-                        <a class="bottonNav" href="./contacto.html">Contacto</a>
-                    </li>
-                </ul>
+        <div id="divNav">
+            <div class="divNavBanner">
+                <img class="bannerMystic" src="../assets/images/MYSTIC.jpg"
+                    alt="Mistyc Clothing banner negro letras fucsia">
             </div>
-            <div class="navRight">
-                <ul>
-                    <li>
-                        <a class="bottonNav" href="registroinicio.html">Ingresa</a>
-                    </li>
-                </ul>
-                <img class="carrito" src="../assets/images/carro-de-la-carretilla.png" alt="carrito de compras">
-            </div>
-        </nav>
+            <label id="labelheader" for="menuBars">
+                <i id="bars" class="fa-solid fa-bars"></i>
+            </label>
+            <input type="checkbox" id="menuBars">
+            <img id="logoMistyc" src="../assets/images/logomistyc1.png" alt="logo mistyc rosa neon">
+            <nav class="contenedorBotton">
+                <div class="navLeft">
+                    <ul>
+                        <li>
+                            <a class="bottonNav" href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="bottonNav" href="./productos.html">Productos</a>
+                        </li>
+                        <li>
+                            <a class="bottonNav" href="./formapago.html">Metodos de pago</a>
+                        </li>
+                        <li>
+                            <a class="bottonNav" href="./sucursalenvio.html">Sucursales</a>
+                        </li>
+                        <li>
+                            <a class="bottonNav" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navRight">
+                    <ul>
+                        <li>
+                            <a class="bottonNav" href="registroinicio.html">Ingresa</a>
+                        </li>
+                        <li>
+                            <i id="shopping" class="fa-solid fa-cart-shopping"></i>
+                        </li>
+                    </ul>
 
+                </div>
+            </nav>
+        </div>
 
     </header>
     <main id="mainRegistro">
+        <h1 class="animationTitle">Inicia Sesión</h1>
         <section class="contenedorFormulario">
             <div class="contenedorDiv">
                 <div class="divRegistro">
                     <div class="formRegistro">
-                        <h4>Registrate</h4>
+                        <h1>Registrate</h1>
                         <form action="">
                             <div>
                                 <label for="nombre">Nombre</label>
@@ -79,14 +92,14 @@
                                     placeholder="Repite tu contraseña">
                             </div>
                             <div>
-                                <button type="submit">Registrarse</button>
+                                <button id="registroButton" type="submit">REGISTRARME</button>
                             </div>
                         </form>
                     </div>
                 </div>
-                
+
                 <div class="divInicio">
-                    <h4>Inicia sesión</h4>
+                    <h1>Inicia sesión</h1>
                     <form action="">
                         <div>
                             <label for="correo">Correo electronico</label>
@@ -97,7 +110,7 @@
                             <input type="password" name="password" id="contraseña" placeholder="Ingresa tu contraseña">
                         </div>
                         <div>
-                            <button class="divInicioButton" type="submit">Ingresar</button>
+                            <button id="ingresarButton" type="submit">INGRESAR</button>
                         </div>
                     </form>
 
@@ -159,3 +172,5 @@
         </section>
     </footer>
 </body>
+
+</html>

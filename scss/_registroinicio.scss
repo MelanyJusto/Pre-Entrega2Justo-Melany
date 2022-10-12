@@ -1,0 +1,137 @@
+#bodyRegistro {
+    @include reset;
+    @include grillaRegistro;
+    width: auto;
+    height: 240vh;
+    font-family: $roboto;
+    background-color: black;
+
+    #headerRegistro{
+        grid-area: hR;
+        height: auto;
+    }
+    #mainRegistro {
+        grid-area: mR;
+        margin-top: 3em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            color:$colortitle;
+            text-align: center;
+        }
+
+        .contenedorFormulario {
+            width: 50%;
+            padding: ($padding*3);
+
+            .contenedorDiv {
+                text-align: center;
+                background-color: $backgroundbox;
+                box-shadow: $boxshadow;
+
+                >* {
+                    padding: ($padding*3);
+                }
+
+                h1 {
+                    font-size: 2em;
+                }
+
+                label {
+                    width: 100%;
+                    padding: ($padding/2);
+                    border: none;
+                }
+
+                input {
+                    width: 100%;
+                    padding: ($padding/2);
+                    border: none;
+                    outline: none;
+
+                }
+
+                button {
+                    width: 100%;
+                    padding: ($padding/2);
+                    margin-top: 1em;
+                    border: none;
+                    border-bottom: $borderbotton;
+                    font-weight: bold;
+                }
+
+                .divRegistro {
+                    text-align: center;
+
+                    button {
+                        background-color: $backgroundboxbotton;
+                    }
+
+                }
+
+                .divInicio {
+                    background-color: $backgroundboxbotton;
+                    padding: ($padding*2);
+                    text-align: center;
+
+                    button {
+                        background-color: $backgroundbox;
+                    }
+                }
+            }
+        }
+    }
+    #footerRegistro{
+        grid-area: fR;
+    }
+}
+
+@media (max-width:768px) {
+    #bodyRegistro {
+        @include gridAuto;
+        width: 768px;
+        height: auto;
+        #mainRegistro{
+            .contenedorFormulario{
+                min-width: 700px;
+                display: flex;
+                flex-direction: column;
+                padding: $padding;
+                .contenedorDiv {
+                    display: flex;
+                    padding: 0;
+                    .divInicio{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width:320px) {
+    #bodyRegistro {
+        width: 320px;
+        @include gridAuto;
+        #mainRegistro{
+            .contenedorFormulario{
+                min-width: 260px;
+                display: flex;
+                padding: $padding;
+                .contenedorDiv {
+                    display: flex;
+                    flex-direction: column;
+                    .divInicio{
+    
+    
+                    }
+                }
+            }
+        }
+
+    }
+}

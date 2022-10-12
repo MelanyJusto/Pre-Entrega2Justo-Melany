@@ -1,0 +1,178 @@
+.headerPages {
+    background: $backgroundHeader;
+    align-items: center;
+    max-height: 100%;
+
+
+    #divNav {
+
+        @include gridHeader;
+
+    }
+
+    .divNavBanner {
+        grid-area: banner;
+
+        img {
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    #logoMistyc {
+        display: none;
+    }
+
+    #menuBars {
+        display: none;
+    }
+
+    #bars {
+        grid-area: bars;
+        color: white;
+        display: none;
+    }
+
+    nav {
+        grid-area: menuNav;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            list-style: none;
+            @include navegador;
+            @include flexNav
+        }
+
+        .navRight {
+            width: 35%;
+            display: flex;
+            justify-content: flex-end;
+
+            ul {
+                width: 100%;
+            }
+
+            #shopping {
+                color: white;
+            }
+        }
+
+        .navLeft {
+            width: 60%;
+
+        }
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .headerPages {
+        height: 100%;
+
+        #divNav {
+            display: flex;
+
+            #labelheader {
+                @include flexCenter;
+                grid-area: bars;
+                width: 50px;
+                height: 50px;
+                border-right: 1px solid white;
+
+                &:hover {
+                    background-color: $backgroundboxbotton;
+                }
+
+                #bars {
+                    display: block;
+                }
+            }
+
+            #logoMistyc {
+                display: block;
+            }
+
+            .contenedorMenuBars {
+                width: 100%;
+
+                display: flex;
+                justify-content: center;
+            }
+
+            .divNavBanner {
+                display: none;
+            }
+
+            #menuBars:checked~.contenedorBotton {
+                transform: translatex(0%);
+
+            }
+
+            .contenedorBotton {
+                width: 50%;
+                height: auto;
+                margin-top: 50px;
+                display: flex;
+                position: absolute;
+                flex-direction: column;
+                background-color: black;
+                transition: all 0.5s;
+                transform: translatex(-100%)
+            }
+
+            ul {
+                padding: 0;
+                flex-direction: column;
+                align-items: baseline;
+
+                li {
+                    width: 100%;
+                    height: 30px;
+
+                    &:hover {
+                        background-color: $backgroundboxbotton;
+                    }
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+
+            div {
+                width: 100%;
+            }
+
+            .navLeft {
+                li {
+                    padding-top: $padding;
+                    border-bottom: 1px solid rgb(48, 48, 48);
+                }
+
+            }
+
+            .navRight {
+                background-color: rgb(255, 154, 233);
+
+                li {
+                    @include flexCenter;
+                }
+
+                #shopping {
+                    display: none;
+                }
+
+            }
+        }
+
+    }
+
+}

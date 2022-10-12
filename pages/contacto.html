@@ -5,91 +5,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mystic Clothing Contacto</title>
+    <meta name="keywords" content=" INDUMENTARIA FEMENINA ROPA MUJER ENVIOS GRATIS CUOTAS MODA MYSTIC CLOTHING ">
+    <meta name="description" content="Formulario de contacto. La ropa que mas te gusta a un solo click de distancia!">
+    <title>Contactanos</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/5f8b5b5000.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="bodyContacto">
     <header id="headerContacto" class="headerPages">
-        <div class="divNavBanner">
-            <img class="bannerMystic" src="../assets/images/MYSTIC.jpg"
-                alt="Mistyc Clothing banner negro letras fucsia">
+        <div id="divNav">
+            <div class="divNavBanner">
+                <img class="bannerMystic" src="../assets/images/MYSTIC.jpg"
+                    alt="Mistyc Clothing banner negro letras fucsia">
+            </div>
+            <label id="labelheader" for="menuBars">
+                <i id="bars" class="fa-solid fa-bars"></i>
+            </label>
+            <input type="checkbox" id="menuBars">
+            <img id="logoMistyc" src="../assets/images/logomistyc1.png" alt="logo mistyc rosa neon">
+            <nav class="contenedorBotton">
+                <div class="navLeft">
+                    <ul>
+                        <li>
+                            <a class="bottonNav" href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="bottonNav" href="./productos.html">Productos</a>
+                        </li>
+                        <li>
+                            <a class="bottonNav" href="./formapago.html">Metodos de pago</a>
+                        </li>
+                        <li>
+                            <a class="bottonNav" href="./sucursalenvio.html">Sucursales</a>
+                        </li>
+                        <li>
+                            <a class="bottonNav" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navRight">
+                    <ul>
+                        <li>
+                            <a class="bottonNav" href="./registroinicio.html">Ingresa</a>
+                        </li>
+                        <li>
+                            <i id="shopping" class="fa-solid fa-cart-shopping"></i>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
         </div>
-        <nav class="contenedorBotton">
-            <div class="navLeft">
-                <ul>
-                    <li>
-                        <a class="bottonNav" href="../index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class="bottonNav" href="./productos.html">Productos</a>
-                    </li>
-                    <li>
-                        <a class="bottonNav" href="./formapago.html">Metodos de pago</a>
-                    </li>
-                    <li>
-                        <a class="bottonNav" href="./sucursalenvio.html">Sucursales</a>
-                    </li>
-                    <li>
-                        <a class="bottonNav" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="navRight">
-                <ul>
-                    <li>
-                        <a class="bottonNav" href="./registroinicio.html">Ingresa</a>
-                    </li>
-                </ul>
-                <img class="carrito" src="../assets/images/carro-de-la-carretilla.png" alt="carrito de compras">
-            </div>
-        </nav>
-
-
     </header>
+    <main id="mainContacto">
+        <h1 class="animationTitle">Contacto</h1>
+        <div id="divContacto" class="divContenedor">
+            <div class="divForm">
+                <div class="divFomrulario">
+                    <p class="pInfoText">
+                        Dejanos tu consulta y a la brevedad nos estaremos comunicando con vos
+                    </p>
+                    <form action="">
+                        <div>
+                            <label for="Nombre y apellido">Nombre completo</label>
+                            <input type="text" name="name" id="Nombre y apellido" placeholder="Nombre y apellido">
+                        </div>
+                        <div>
+                            <label for="Email">E-mail</label>
+                            <input type="email" name="email" id="Email" placeholder="Correo electronico">
+                        </div>
+                        <div>
+                            <label for="Telefono">Telefono</label>
+                            <input type="tel" name="telefono" id="Telefono" placeholder="Telefono">
+                        </div>
+                        <div class="grilla">
+                            <textarea name="message" cols="30" rows="10"> Deja tu mensaje...</textarea>
+                        </div>
+                        <div class="grilla">
+                            <button class="buttonsContact" type="submit">Enviar</button>
+                            <button class="buttonsContact" type="reset">Limpiar</button>
+                        </div>
+                    </form>
 
-    <div id="divContacto" class="divContenedor">
-        <h2 class="textoForm">Contacto</h2>
-        <div class="divForm">
-            <div class="divFomrulario">
-                <p class="pInfoText"> 
-                    Dejanos tu consulta y a la brevedad nos estaremos comunicando con vos
-                </p>
-                <form action="">
-                    <div>
-                        <label for="Nombre y apellido">Nombre completo</label>
-                        <input type="text" name="name" id="Nombre y apellido" placeholder="Nombre y apellido">
-                    </div>
-                    <div>
-                        <label for="Email">E-mail</label>
-                        <input type="email" name="email" id="Email" placeholder="Correo electronico">
-                    </div>
-                    <div>
-                        <label for="Telefono">Telefono</label>
-                        <input type="tel" name="telefono" id="Telefono" placeholder="Telefono">
-                    </div>
-                    <div class="grilla">
-                        <textarea name="message" cols="30" rows="10"> Deja tu mensaje...</textarea>
-                    </div>
-                    <div class="grilla">
-                        <button class="buttonsContact" type="submit">Enviar</button>
-                        <button class="buttonsContact" type="reset">Limpiar</button>
-                    </div>
-                </form>
-
-            </div>
-            <div class="infoText">
+                </div>
+                <div class="infoText">
                     <ul>
                         <li><i class="fa-solid fa-location-dot"></i><br> Avenida 1234</li>
                         <li><i class="fa-solid fa-phone"></i><br>0303456</li>
                         <li><i class="fa-regular fa-envelope"></i><br>mystic@mystic</li>
                     </ul>
+                </div>
             </div>
         </div>
-
-    </div>
-
+    </main>
     <footer id="footerContacto" class="footerPages">
         <section class="footerTop">
             <div class="divText">
@@ -141,4 +150,7 @@
 
         </section>
     </footer>
+    <script src="https://kit.fontawesome.com/5f8b5b5000.js" crossorigin="anonymous"></script>
 </body>
+
+</html>

@@ -1,0 +1,101 @@
+#bodyPagos {
+    @include reset;
+    width: auto;
+    height: auto;
+    @include grillaPagos;
+    background-color: black;
+    font-family: $roboto;
+
+    #headerPagos {
+        height: auto;
+        grid-area: hp;
+    }
+
+    #mainPagos {
+        grid-area: mp;
+        h1 {
+            color: $colortitle;
+            text-align: center;
+        }
+        #sectionPagos {
+            height: 40%;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 300px;
+                height: 300px;
+                background-color: $backgroundbox;
+                box-shadow: $boxshadow;
+                text-align: center;
+
+                i {
+                    font-size: 4em;
+                }
+            }
+        }
+
+        #arrivals {
+            img {
+                width: 100%;
+            }
+        }
+
+        #footerPagos {
+        grid-area: fp;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    #bodyPagos{
+        @include gridAuto;
+        height: auto;
+        #headerPagos{
+            height: 50px;
+        }
+        #mainPagos{
+            #sectionPagos{
+                width: 768px;
+                div{
+                    width: 250px;
+                    height: 250px;
+                    font-size: .8em;
+                    margin:1em;
+                    i{
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 320px){
+    #bodyPagos{
+        width: 320px;
+        #headerPagos{
+            height: 50px;
+        }
+        #mainPagos{
+            width: 320px;
+            #sectionPagos{
+                width: 320px;
+                height: auto;
+                flex-direction: column;
+                div{
+                    margin: 1em;
+                    height: 70%;
+                }
+            }
+            #arrivals{
+                display: none;
+
+            }
+        }
+    }
+}
