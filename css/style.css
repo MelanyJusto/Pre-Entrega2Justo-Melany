@@ -7,7 +7,7 @@
   grid-template-rows: .5fr 3fr .5fr;
   grid-template-columns: 1fr;
   grid-template-areas: "h1" "m1" "f1";
-  width: auto;
+  width: 100vw;
   height: 320vh;
   background-color: black;
   font-family: "Roboto", sans-serif; }
@@ -98,7 +98,7 @@
   grid-area: f1;
   height: auto; }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   #bodyIndex #headerIndex {
     height: 354px; } }
 
@@ -122,24 +122,27 @@
     height: auto; } }
 
 @media (max-width: 320px) {
-  #bodyIndex #headerIndex {
-    height: 50px; }
-  #bodyIndex #mainIndex #sectionMetodos {
-    height: auto;
-    font-size: .8em;
-    display: flex;
-    align-items: center;
-    flex-direction: column; }
-  #bodyIndex #mainIndex #sectionImagenesIndex {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    font-size: .8em; }
-    #bodyIndex #mainIndex #sectionImagenesIndex div img {
-      height: auto; }
-  #bodyIndex #footerIndex {
-    grid-template-rows: 1fr 2fr;
-    grid-template-columns: 1fr; } }
+  #bodyIndex {
+    grid-template-columns: auto;
+    grid-template-rows: auto; }
+    #bodyIndex #headerIndex {
+      height: 50px; }
+    #bodyIndex #mainIndex #sectionMetodos {
+      height: auto;
+      font-size: .8em;
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+    #bodyIndex #mainIndex #sectionImagenesIndex {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      font-size: .8em; }
+      #bodyIndex #mainIndex #sectionImagenesIndex div img {
+        height: auto; }
+    #bodyIndex #footerIndex {
+      grid-template-rows: 1fr 2fr;
+      grid-template-columns: 1fr; } }
 
 .headerPages {
   background: black;
@@ -380,7 +383,7 @@
   grid-template-rows: 10% 80% 10%;
   grid-template-columns: 1fr;
   grid-template-areas: "hpro" "mpro" "fpro";
-  width: auto;
+  width: 100vw;
   height: 360vh;
   background-color: black;
   font-family: "Roboto", sans-serif; }
@@ -428,8 +431,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: auto;
-  height: auto;
+  width: 100vw;
+  height: 280vh;
   display: grid;
   grid-template-rows: 17% 75% 13%;
   grid-template-columns: 1fr;
@@ -508,8 +511,8 @@
   grid-template-rows: 17% 75% 13%;
   grid-auto-columns: 1fr;
   grid-template-areas: "hS" "mS" "fS";
-  width: auto;
-  height: auto;
+  width: 100vw;
+  height: 300vh;
   background-color: black;
   font-family: "Roboto", sans-serif; }
   #bodySucursal #headerSucursal {
@@ -599,7 +602,7 @@
   grid-template-rows: 15% 70% 15%;
   grid-auto-columns: 1fr;
   grid-template-areas: "hC" "mC" "fC";
-  width: auto;
+  width: 100vw;
   height: 240vh;
   background-color: black;
   font-family: "Roboto", sans-serif; }
@@ -684,7 +687,7 @@
   grid-template-rows: 15% 70% 15%;
   grid-auto-columns: 1fr;
   grid-template-areas: "hR" "mR" "fR";
-  width: auto;
+  width: 100vw;
   height: 240vh;
   font-family: "Roboto", sans-serif;
   background-color: black; }
