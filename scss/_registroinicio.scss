@@ -118,6 +118,7 @@
         width: 320px;
         @include gridAuto;
         #mainRegistro{
+            margin: 0;
             .contenedorFormulario{
                 min-width: 260px;
                 display: flex;

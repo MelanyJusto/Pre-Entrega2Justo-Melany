@@ -4,11 +4,11 @@
   padding: 0;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 18% 100% 15%;
+  grid-template-rows: .5fr 3fr .5fr;
   grid-template-columns: 1fr;
   grid-template-areas: "h1" "m1" "f1";
   width: auto;
-  height: 230vh;
+  height: 320vh;
   background-color: black;
   font-family: "Roboto", sans-serif; }
 
@@ -20,7 +20,8 @@
   grid-template-rows: 40% 15% 35%;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "sA sA" " sM sM" "aS sI";
-  grid-area: m1; }
+  grid-area: m1;
+  margin-top: 1em; }
   #mainIndex h2 {
     color: white;
     text-align: center; }
@@ -94,18 +95,25 @@
     color: deeppink; } }
 
 #footerIndex {
-  grid-area: f1; }
+  grid-area: f1;
+  height: auto; }
+
+@media (max-width: 1200px) {
+  #bodyIndex #headerIndex {
+    height: 354px; } }
 
 @media (max-width: 768px) {
   #bodyIndex {
-    height: 100%;
-    grid-template-columns: auto;
-    grid-template-rows: auto; }
+    grid-template-columns: 1fr;
+    grid-template-rows: 5% 80% 15%; }
+    #bodyIndex #headerIndex {
+      height: 50px; }
     #bodyIndex #mainIndex {
+      margin: 0px;
+      height: auto;
       display: flex;
-      flex-direction: column; }
-      #bodyIndex #mainIndex #sectionMetodos {
-        height: 15vh; }
+      flex-direction: column;
+      justify-content: space-around; }
       #bodyIndex #mainIndex #asideIndex {
         margin: 0; }
     #bodyIndex #footerIndex .footerPages {
@@ -114,25 +122,24 @@
     height: auto; } }
 
 @media (max-width: 320px) {
-  #bodyIndex {
-    grid-template-columns: auto;
-    grid-template-rows: auto; }
-    #bodyIndex #mainIndex #sectionMetodos {
-      height: auto;
-      font-size: .8em;
-      display: flex;
-      align-items: center;
-      flex-direction: column; }
-    #bodyIndex #mainIndex #sectionImagenesIndex {
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      font-size: .8em; }
-      #bodyIndex #mainIndex #sectionImagenesIndex div img {
-        height: auto; }
-    #bodyIndex #footerIndex {
-      grid-template-rows: 1fr 2fr;
-      grid-template-columns: 1fr; } }
+  #bodyIndex #headerIndex {
+    height: 50px; }
+  #bodyIndex #mainIndex #sectionMetodos {
+    height: auto;
+    font-size: .8em;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+  #bodyIndex #mainIndex #sectionImagenesIndex {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: .8em; }
+    #bodyIndex #mainIndex #sectionImagenesIndex div img {
+      height: auto; }
+  #bodyIndex #footerIndex {
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr; } }
 
 .headerPages {
   background: black;
@@ -264,9 +271,9 @@
   background-color: white;
   max-height: 100%;
   display: grid;
-  grid-template-rows: .5fr 3fr .5fr;
+  grid-template-rows: 40% 60%;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "ft ft ft" "fm fm fm " "fb fb fb"; }
+  grid-template-areas: "ft ft ft" "fm fm fm "; }
   .footerPages .footerTop {
     grid-area: ft;
     display: flex;
@@ -313,10 +320,6 @@
       .footerPages .footerMiddle .footerContacto ul {
         padding: 0%;
         list-style: none; }
-
-.footerBottom {
-  grid-area: fb;
-  border-bottom: 0.5px solid #b6b6b6; }
 
 @media (max-width: 768px) {
   .footerPages {
@@ -413,16 +416,13 @@
     height: auto; }
     #bodyProductos header {
       height: 50px; }
-    #bodyProductos main {
-      max-height: fit-content; }
-      #bodyProductos main section div {
-        flex-direction: column; } }
+    #bodyProductos main section div {
+      flex-direction: column; } }
 
 @media (max-width: 320px) {
-  #bodyProductos main section div {
-    height: 150px; }
-    #bodyProductos main section div img {
-      max-height: max-content; } }
+  #bodyProductos #mainProductos {
+    margin-top: 3em;
+    padding: 0; } }
 
 #bodyPagos {
   margin: 0;
@@ -764,10 +764,12 @@
     width: 320px;
     grid-template-columns: auto;
     grid-template-rows: auto; }
-    #bodyRegistro #mainRegistro .contenedorFormulario {
-      min-width: 260px;
-      display: flex;
-      padding: 1em; }
-      #bodyRegistro #mainRegistro .contenedorFormulario .contenedorDiv {
+    #bodyRegistro #mainRegistro {
+      margin: 0; }
+      #bodyRegistro #mainRegistro .contenedorFormulario {
+        min-width: 260px;
         display: flex;
-        flex-direction: column; } }
+        padding: 1em; }
+        #bodyRegistro #mainRegistro .contenedorFormulario .contenedorDiv {
+          display: flex;
+          flex-direction: column; } }

@@ -10,7 +10,7 @@
 // mixin grillas
 @mixin gridIndex{
     display: grid;
-    grid-template-rows: 18% 100% 15%;
+    grid-template-rows: .5fr 3fr .5fr;
     grid-template-columns: 1fr;
     grid-template-areas: "h1"
                           "m1"
@@ -42,11 +42,10 @@
 }
 @mixin foooterPages{
     display: grid;
-    grid-template-rows: .5fr 3fr .5fr;
+    grid-template-rows: 40% 60%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "ft ft ft"
                           "fm fm fm "
-                          "fb fb fb"
 }
 @mixin gridAuto{
     grid-template-columns: auto;

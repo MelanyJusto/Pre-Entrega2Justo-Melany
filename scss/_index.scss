@@ -2,7 +2,7 @@
     @include reset;
     @include gridIndex;
     width: auto;
-    height: 230vh;
+    height: 320vh;
     background-color: black;
     font-family: $roboto;
 
@@ -15,6 +15,7 @@
 #mainIndex {
     @include grillaMainIndex;
     grid-area: m1;
+    margin-top: 1em;
 
 
     h2 {
@@ -123,26 +124,39 @@
 
 #footerIndex {
     grid-area: f1;
+    height: auto;
 }
+
+@media (max-width:1200px) {
+    #bodyIndex {
+        #headerIndex{
+            height: 354px;
+        }
+    }
+}
+
+
 
 @media (max-width: 768px) {
 
     #bodyIndex {
-        height: 100%;
-        @include gridAuto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 80% 15%;
+        #headerIndex{
+            height: 50px;
+        }
 
         #mainIndex {
+            margin: 0px;
+            height: auto;
             display: flex;
             flex-direction: column;
-
+            justify-content: space-around;
             #sectionMetodos {
-                height: 15vh;
 
             }
 
-            #sectionImagenesIndex {
-
-            }
+            #sectionImagenesIndex {}
 
             #asideIndex {
                 margin: 0;
@@ -163,9 +177,12 @@
     }
 }
 
+
 @media (max-width: 320px) {
     #bodyIndex {
-        @include gridAuto;
+        #headerIndex{
+            height: 50px;
+        }
 
         #mainIndex {
             #sectionMetodos {
