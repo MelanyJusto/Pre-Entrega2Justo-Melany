@@ -129,11 +129,12 @@
 
 // MEDIA QUERYS
 
-@media (max-width: 768px), (max-width:1024px){
+@media (max-width: 768px),
+(max-width:1024px),
+(orientation:landscape) {
 
     #bodyIndex {
-        grid-template-columns: 1fr;
-        grid-template-rows: 5% 80% 15%;
+        @include gridAuto;
 
         #headerIndex {
             height: 50px;
@@ -166,10 +167,11 @@
 }
 
 
-@media (max-width: 320px),(max-width:450px) {
+@media (max-width: 320px),
+(max-width:450px) {
     #bodyIndex {
         @include gridAuto;
-        
+
         #headerIndex {
             height: 50px;
         }

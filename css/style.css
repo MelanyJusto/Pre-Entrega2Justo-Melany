@@ -98,10 +98,10 @@
   grid-area: f1;
   height: auto; }
 
-@media (max-width: 768px), (max-width: 1024px) {
+@media (max-width: 768px), (max-width: 1024px), (orientation: landscape) {
   #bodyIndex {
-    grid-template-columns: 1fr;
-    grid-template-rows: 5% 80% 15%; }
+    grid-template-columns: auto;
+    grid-template-rows: auto; }
     #bodyIndex #headerIndex {
       height: 50px; }
     #bodyIndex #mainIndex {
