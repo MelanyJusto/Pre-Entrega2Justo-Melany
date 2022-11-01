@@ -1,4 +1,4 @@
-#bodyProductos{
+#bodyProductos {
     @include reset;
     @include grillaProductos;
     width: 100vw;
@@ -9,60 +9,101 @@
     #headerProductos {
         grid-area: hpro;
     }
-    #mainProductos{
+
+    #mainProductos {
         grid-area: mpro;
         padding: ($padding*3);
-        section{
+
+        section {
 
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            div{
+
+            .contenedorImg {
                 padding: $padding;
-                height: auto;
-                h4 {
-                    margin: 0;
-                    text-align: center;
-                    color: rgb(245, 177, 240);
+                &:hover{
+                    transform: rotateY(180dsg);
+                    
                 }
-                
-                h6 {
-                    margin: 0;
-                    text-align: center;
-                    color: white;
+
+                .divImg {
+                    width: 240px;
+                    height: 370px;
+                    position: relative;
+                    transform-style: preserve-3d;
+
+                    
+
+                    .divImg1, .divImg2 {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        backface-visibility: hidden;
+                        transform-style: preserve-3d;
+
+                    }
+                    .divImg2{
+                        transform: rotateY(180dsg);
+                    }
+
                 }
+                .divTextProd{
+                    p {
+                        margin: 0;
+                        font-weight: bold;
+                        text-align: center;
+                        color: rgb(245, 177, 240);
+                    }
+                }
+                .buttonCompras{
+                    text-align: center;
+                    button{
+
+                        height: 30px ;
+                        background-color: $backgroundbox;
+                        color: black;
+                        font-weight: bolder;
+                        cursor: pointer;
+                    }
+                   
+                }
+
+
             }
-            img{
-                object-fit: cover;
-            }
+
         }
     }
-    #footerProductos{
+
+    #footerProductos {
         grid-area: fpro;
     }
 
 }
 
-@media (max-width: 768px){
-    #bodyProductos{
+@media (max-width: 768px) {
+    #bodyProductos {
         @include gridAuto;
         height: auto;
-        header{
+
+        header {
             height: 50px;
         }
-        main{
 
-            section{
-                div{
+        main {
+
+            section {
+                div {
                     flex-direction: column;
                 }
             }
         }
     }
 }
-@media (max-width: 320px){
-    #bodyProductos{
-        #mainProductos{
+
+@media (max-width: 320px) {
+    #bodyProductos {
+        #mainProductos {
             margin-top: 3em;
             padding: 0;
         }

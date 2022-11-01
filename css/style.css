@@ -98,10 +98,6 @@
   grid-area: f1;
   height: auto; }
 
-@media (min-width: 1200px) {
-  #bodyIndex #headerIndex {
-    height: 354px; } }
-
 @media (max-width: 768px) {
   #bodyIndex {
     grid-template-columns: 1fr;
@@ -121,7 +117,7 @@
   #footerIndex {
     height: auto; } }
 
-@media (max-width: 320px) {
+@media (max-width: 320px), (max-width: 450px) {
   #bodyIndex {
     grid-template-columns: auto;
     grid-template-rows: auto; }
@@ -396,19 +392,36 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center; }
-      #bodyProductos #mainProductos section div {
-        padding: 1em;
-        height: auto; }
-        #bodyProductos #mainProductos section div h4 {
+      #bodyProductos #mainProductos section .contenedorImg {
+        padding: 1em; }
+        #bodyProductos #mainProductos section .contenedorImg:hover {
+          transform: rotateY(180dsg); }
+        #bodyProductos #mainProductos section .contenedorImg .divImg {
+          width: 240px;
+          height: 370px;
+          position: relative;
+          transform-style: preserve-3d; }
+          #bodyProductos #mainProductos section .contenedorImg .divImg .divImg1, #bodyProductos #mainProductos section .contenedorImg .divImg .divImg2 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transform-style: preserve-3d; }
+          #bodyProductos #mainProductos section .contenedorImg .divImg .divImg2 {
+            transform: rotateY(180dsg); }
+        #bodyProductos #mainProductos section .contenedorImg .divTextProd p {
           margin: 0;
+          font-weight: bold;
           text-align: center;
           color: #f5b1f0; }
-        #bodyProductos #mainProductos section div h6 {
-          margin: 0;
-          text-align: center;
-          color: white; }
-      #bodyProductos #mainProductos section img {
-        object-fit: cover; }
+        #bodyProductos #mainProductos section .contenedorImg .buttonCompras {
+          text-align: center; }
+          #bodyProductos #mainProductos section .contenedorImg .buttonCompras button {
+            height: 30px;
+            background-color: #ffcefd;
+            color: black;
+            font-weight: bolder;
+            cursor: pointer; }
   #bodyProductos #footerProductos {
     grid-area: fpro; }
 

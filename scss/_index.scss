@@ -127,15 +127,7 @@
     height: auto;
 }
 
-@media (min-width:1200px) {
-    #bodyIndex {
-        #headerIndex {
-            height: 354px;
-        }
-    }
-}
-
-
+// MEDIA QUERYS
 
 @media (max-width: 768px) {
 
@@ -174,7 +166,7 @@
 }
 
 
-@media (max-width: 320px) {
+@media (max-width: 320px),(max-width:450px) {
     #bodyIndex {
         @include gridAuto;
         
