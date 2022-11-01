@@ -501,14 +501,15 @@
 
 @media (max-width: 320px), (max-width: 450px) {
   #bodyPagos {
-    width: 320px; }
+    width: 100vw; }
     #bodyPagos #headerPagos {
       height: 50px; }
     #bodyPagos #mainPagos {
-      width: 320px; }
+      width: 100vw;
+      height: 150vh; }
       #bodyPagos #mainPagos #sectionPagos {
-        width: 320px;
-        height: auto;
+        width: 100vw;
+        height: 80%;
         flex-direction: column; }
         #bodyPagos #mainPagos #sectionPagos div {
           margin: 1em;
@@ -590,12 +591,12 @@
           width: 300px;
           height: 320px; } }
 
-@media (max-width: 320px) {
+@media (max-width: 320px), (max-width: 450px) {
   #bodySucursal {
     grid-template-columns: auto;
     grid-template-rows: auto; }
     #bodySucursal #mainSucursal {
-      max-width: 320px; }
+      max-width: 100%; }
       #bodySucursal #mainSucursal h1,
       #bodySucursal #mainSucursal h2 {
         font-size: 1.5em; }
@@ -692,7 +693,9 @@
       padding: 1em;
       margin-bottom: 1em; }
     #bodyContacto #mainContacto .divForm {
-      flex-direction: column; } }
+      flex-direction: column; }
+      #bodyContacto #mainContacto .divForm .infoText {
+        width: auto; } }
 
 #bodyRegistro {
   margin: 0;
@@ -779,7 +782,7 @@
 
 @media (max-width: 320px), (max-width: 450px) {
   #bodyRegistro {
-    width: 320px;
+    width: 100vw;
     grid-template-columns: auto;
     grid-template-rows: auto; }
     #bodyRegistro #mainRegistro {

@@ -76,15 +76,16 @@
 }
 @media (max-width: 320px), (max-width:450px){
     #bodyPagos{
-        width: 320px;
+        width: 100vw;
         #headerPagos{
             height: 50px;
         }
         #mainPagos{
-            width: 320px;
+            width: 100vw;
+            height: 150vh;
             #sectionPagos{
-                width: 320px;
-                height: auto;
+                width: 100vw;
+                height: 80%;
                 flex-direction: column;
                 div{
                     margin: 1em;
@@ -93,7 +94,6 @@
             }
             #arrivals{
                 display: none;
-
             }
         }
     }

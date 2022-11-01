@@ -120,6 +120,9 @@
             }
             .divForm{
                 flex-direction: column;
+                .infoText{
+                    width: auto;
+                }
             }
         }
 
