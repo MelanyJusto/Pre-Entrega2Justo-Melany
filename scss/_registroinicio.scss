@@ -87,10 +87,10 @@
     }
 }
 
-@media (max-width:768px) {
+@media (max-width:768px), (max-width:1024px) {
     #bodyRegistro {
         @include gridAuto;
-        width: 768px;
+        width: 100vw;
         height: auto;
         #mainRegistro{
             .contenedorFormulario{
@@ -113,7 +113,7 @@
     }
 }
 
-@media (max-width:320px) {
+@media (max-width:320px),(max-width:450px) {
     #bodyRegistro {
         width: 320px;
         @include gridAuto;

@@ -130,8 +130,7 @@
 // MEDIA QUERYS
 
 @media (max-width: 768px),
-(max-width:1024px),
-(orientation:landscape) {
+(max-width:1024px) {
 
     #bodyIndex {
         @include gridAuto;
@@ -146,6 +145,10 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+
+            #sectionMetodos {
+                height: 100%;
+            }
 
             #asideIndex {
                 margin: 0;

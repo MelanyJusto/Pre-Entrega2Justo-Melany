@@ -66,10 +66,12 @@
                 .infoText {
                     background-color: $backgroundboxbotton;
                     padding: 2em;
+
     
                     .pInfoText {
                         font-weight: 500;
                         text-align: center;
+
                     }
     
                     ul {
@@ -89,13 +91,15 @@
 
 
 }
-@media (max-width:768px){
+@media (max-width:768px),(max-width:1024px){
     #bodyContacto{
         @include gridAuto;
+        width: 100vw;
         height: auto;
         .divForm{
             display: flex;
             .infoText{
+                width: 25%;
                 display: flex;
                 align-items: center;
             }
@@ -104,7 +108,7 @@
     }
 
 }
-@media (max-width:320px){
+@media (max-width:320px),(max-width:450px){
     #bodyContacto{
         #mainContacto{
             padding: 1em;

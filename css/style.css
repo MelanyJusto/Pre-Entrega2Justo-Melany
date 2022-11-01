@@ -98,7 +98,7 @@
   grid-area: f1;
   height: auto; }
 
-@media (max-width: 768px), (max-width: 1024px), (orientation: landscape) {
+@media (max-width: 768px), (max-width: 1024px) {
   #bodyIndex {
     grid-template-columns: auto;
     grid-template-rows: auto; }
@@ -110,6 +110,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around; }
+      #bodyIndex #mainIndex #sectionMetodos {
+        height: 100%; }
       #bodyIndex #mainIndex #asideIndex {
         margin: 0; }
     #bodyIndex #footerIndex .footerPages {
@@ -320,7 +322,7 @@
         padding: 0%;
         list-style: none; }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 1024px) {
   .footerPages {
     grid-template-columns: auto;
     grid-template-rows: auto; }
@@ -354,7 +356,7 @@
           padding: 0;
           list-style: none; } }
 
-@media (max-width: 320px) {
+@media (max-width: 320px), (max-width: 450px) {
   .footerPages {
     font-size: 1em; }
     .footerPages .footerTop {
@@ -482,24 +484,22 @@
     #bodyPagos #mainPagos #footerPagos {
       grid-area: fp; }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 1024px) {
   #bodyPagos {
     grid-template-columns: auto;
     grid-template-rows: auto;
     height: auto; }
     #bodyPagos #headerPagos {
       height: 50px; }
-    #bodyPagos #mainPagos #sectionPagos {
-      width: 768px; }
-      #bodyPagos #mainPagos #sectionPagos div {
-        width: 250px;
-        height: 250px;
-        font-size: .8em;
-        margin: 1em; }
-        #bodyPagos #mainPagos #sectionPagos div i {
-          font-size: 2em; } }
+    #bodyPagos #mainPagos #sectionPagos div {
+      width: 250px;
+      height: 250px;
+      font-size: .8em;
+      margin: 1em; }
+      #bodyPagos #mainPagos #sectionPagos div i {
+        font-size: 2em; } }
 
-@media (max-width: 320px) {
+@media (max-width: 320px), (max-width: 450px) {
   #bodyPagos {
     width: 320px; }
     #bodyPagos #headerPagos {
@@ -574,7 +574,7 @@
     opacity: 1;
     transform: translateX(0px); } }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 1024px) {
   #bodySucursal {
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -670,18 +670,20 @@
   #bodyContacto #footerContacto {
     grid-area: fC; }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 1024px) {
   #bodyContacto {
     grid-template-columns: auto;
     grid-template-rows: auto;
+    width: 100vw;
     height: auto; }
     #bodyContacto .divForm {
       display: flex; }
       #bodyContacto .divForm .infoText {
+        width: 25%;
         display: flex;
         align-items: center; } }
 
-@media (max-width: 320px) {
+@media (max-width: 320px), (max-width: 450px) {
   #bodyContacto #mainContacto {
     padding: 1em;
     display: flex;
@@ -756,11 +758,11 @@
   #bodyRegistro #footerRegistro {
     grid-area: fR; }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 1024px) {
   #bodyRegistro {
     grid-template-columns: auto;
     grid-template-rows: auto;
-    width: 768px;
+    width: 100vw;
     height: auto; }
     #bodyRegistro #mainRegistro .contenedorFormulario {
       min-width: 700px;
@@ -775,7 +777,7 @@
           flex-direction: column;
           justify-content: center; } }
 
-@media (max-width: 320px) {
+@media (max-width: 320px), (max-width: 450px) {
   #bodyRegistro {
     width: 320px;
     grid-template-columns: auto;
