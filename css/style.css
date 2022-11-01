@@ -98,7 +98,7 @@
   grid-area: f1;
   height: auto; }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (orientation: landscape) {
   #bodyIndex {
     grid-template-columns: 1fr;
     grid-template-rows: 5% 80% 15%; }
