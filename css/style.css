@@ -480,7 +480,8 @@
         #bodyPagos #mainPagos #sectionPagos div i {
           font-size: 4em; }
     #bodyPagos #mainPagos #arrivals img {
-      width: 100%; }
+      width: 100%;
+      height: 100%; }
     #bodyPagos #mainPagos #footerPagos {
       grid-area: fp; }
 
@@ -497,7 +498,9 @@
       font-size: .8em;
       margin: 1em; }
       #bodyPagos #mainPagos #sectionPagos div i {
-        font-size: 2em; } }
+        font-size: 2em; }
+    #bodyPagos #mainPagos #sectionPagos #arrivals {
+      height: auto; } }
 
 @media (max-width: 320px), (max-width: 450px) {
   #bodyPagos {
