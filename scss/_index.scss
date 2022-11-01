@@ -129,7 +129,7 @@
 
 // MEDIA QUERYS
 
-@media (max-width: 768px), (orientation: landscape) {
+@media (max-width: 768px),(max-width:1024px), (orientation: landscape) {
 
     #bodyIndex {
         grid-template-columns: 1fr;
