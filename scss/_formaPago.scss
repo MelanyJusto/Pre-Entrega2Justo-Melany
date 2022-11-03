@@ -54,6 +54,8 @@
     }
 }
 
+// MEDIA QUERYS
+
 @media (max-width: 768px), (max-width:1024px){
     #bodyPagos{
         @include gridAuto;
