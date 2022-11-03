@@ -13,12 +13,13 @@
 
     #mainPagos {
         grid-area: mp;
+        margin-top: 2em;
         h1 {
             color: $colortitle;
             text-align: center;
         }
         #sectionPagos {
-            height: 40%;
+            height: 30%;
             background-color: black;
             display: flex;
             justify-content: space-around;

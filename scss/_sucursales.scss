@@ -2,7 +2,7 @@
     @include reset;
     @include grillaSucursal;
     width: 100vw;
-    height: 300vh;
+    height: 280vh;
     background-color: black;
     font-family: $roboto;
 
@@ -12,6 +12,7 @@
 
     #mainSucursal {
         grid-area: mS;
+        margin-top: 2em;
 
         h1 {
             text-align: center;
@@ -92,7 +93,7 @@
         #mainSucursal {
                 padding: 1em;
             #sectionSuc {
-                max-width: 768px;
+                max-width: 100%;
 
                 div {
                     margin: 1em;

@@ -22,9 +22,6 @@
   grid-template-areas: "sA sA" " sM sM" "aS sI";
   grid-area: m1;
   margin-top: 1em; }
-  #mainIndex h2 {
-    color: white;
-    text-align: center; }
   #mainIndex #sectionArrivals {
     grid-area: sA; }
     #mainIndex #sectionArrivals img {
@@ -59,16 +56,32 @@
   #mainIndex #sectionImagenesIndex {
     grid-area: sI;
     margin-top: 3em;
-    display: grid;
-    grid-template-rows: .5fr 3fr;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "nI nI nI" "i3 i2 i1"; }
-    #mainIndex #sectionImagenesIndex img {
-      width: 90%;
-      max-height: 100%;
-      padding: 1em; }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    #mainIndex #sectionImagenesIndex div {
+      width: 240px;
+      height: 370px;
+      position: relative; }
+      #mainIndex #sectionImagenesIndex div .divImgIndex, #mainIndex #sectionImagenesIndex div .divTexto {
+        position: absolute;
+        width: 100%;
+        height: 100%; }
+      #mainIndex #sectionImagenesIndex div .divTexto {
+        opacity: 0;
+        background-color: rgba(255, 255, 255, 0.39);
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #mainIndex #sectionImagenesIndex div .divTexto p {
+          color: black;
+          font-weight: bolder; }
+        #mainIndex #sectionImagenesIndex div .divTexto:hover {
+          opacity: 10; }
     #mainIndex #sectionImagenesIndex .newIn {
       grid-area: nI;
+      color: white;
+      text-align: center;
       width: 100%;
       height: auto;
       text-align: center; }
@@ -101,7 +114,8 @@
 @media (max-width: 768px), (max-width: 1024px) {
   #bodyIndex {
     grid-template-columns: auto;
-    grid-template-rows: auto; }
+    grid-template-rows: auto;
+    height: auto; }
     #bodyIndex #headerIndex {
       height: 50px; }
     #bodyIndex #mainIndex {
@@ -110,8 +124,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around; }
-      #bodyIndex #mainIndex #sectionMetodos {
-        height: 100%; }
       #bodyIndex #mainIndex #asideIndex {
         margin: 0; }
     #bodyIndex #footerIndex .footerPages {
@@ -134,7 +146,6 @@
     #bodyIndex #mainIndex #sectionImagenesIndex {
       height: auto;
       display: flex;
-      flex-direction: column;
       font-size: .8em; }
       #bodyIndex #mainIndex #sectionImagenesIndex div img {
         height: auto; }
@@ -390,27 +401,28 @@
   #bodyProductos #mainProductos {
     grid-area: mpro;
     padding: 3em; }
+    #bodyProductos #mainProductos h1 {
+      color: #e744ab;
+      text-align: center; }
     #bodyProductos #mainProductos section {
       display: flex;
       flex-wrap: wrap;
       justify-content: center; }
       #bodyProductos #mainProductos section .contenedorImg {
         padding: 1em; }
-        #bodyProductos #mainProductos section .contenedorImg:hover {
-          transform: rotateY(180dsg); }
         #bodyProductos #mainProductos section .contenedorImg .divImg {
           width: 240px;
           height: 370px;
-          position: relative;
-          transform-style: preserve-3d; }
+          position: relative; }
           #bodyProductos #mainProductos section .contenedorImg .divImg .divImg1, #bodyProductos #mainProductos section .contenedorImg .divImg .divImg2 {
             width: 100%;
             height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
-            transform-style: preserve-3d; }
+            position: absolute; }
           #bodyProductos #mainProductos section .contenedorImg .divImg .divImg2 {
-            transform: rotateY(180dsg); }
+            opacity: 0; }
+            #bodyProductos #mainProductos section .contenedorImg .divImg .divImg2:hover {
+              opacity: 10;
+              transition: .5s ease-out; }
         #bodyProductos #mainProductos section .contenedorImg .divTextProd p {
           margin: 0;
           font-weight: bold;
@@ -427,20 +439,25 @@
   #bodyProductos #footerProductos {
     grid-area: fpro; }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 1024px) {
   #bodyProductos {
     grid-template-columns: auto;
     grid-template-rows: auto;
     height: auto; }
-    #bodyProductos header {
-      height: 50px; }
+    #bodyProductos .headerPages {
+      height: 50px;
+      z-index: 1; }
     #bodyProductos main section div {
       flex-direction: column; } }
 
-@media (max-width: 320px) {
+@media (max-width: 320px), (max-width: 450px) {
+  #bodyProductos .headerPages {
+    z-index: 1; }
   #bodyProductos #mainProductos {
     margin-top: 3em;
-    padding: 0; } }
+    padding: 0; }
+    #bodyProductos #mainProductos section .divImg1, #bodyProductos #mainProductos section .divImg2 {
+      position: static; } }
 
 #bodyPagos {
   margin: 0;
@@ -449,7 +466,7 @@
   width: 100vw;
   height: 280vh;
   display: grid;
-  grid-template-rows: 17% 75% 13%;
+  grid-template-rows: 13% 74% 13%;
   grid-template-columns: 1fr;
   grid-template-areas: "hp" "mp" "fp";
   background-color: black;
@@ -458,12 +475,13 @@
     height: auto;
     grid-area: hp; }
   #bodyPagos #mainPagos {
-    grid-area: mp; }
+    grid-area: mp;
+    margin-top: 2em; }
     #bodyPagos #mainPagos h1 {
       color: #e744ab;
       text-align: center; }
     #bodyPagos #mainPagos #sectionPagos {
-      height: 40%;
+      height: 30%;
       background-color: black;
       display: flex;
       justify-content: space-around;
@@ -525,17 +543,18 @@
   padding: 0;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 17% 75% 13%;
+  grid-template-rows: 13% 74% 13%;
   grid-auto-columns: 1fr;
   grid-template-areas: "hS" "mS" "fS";
   width: 100vw;
-  height: 300vh;
+  height: 280vh;
   background-color: black;
   font-family: "Roboto", sans-serif; }
   #bodySucursal #headerSucursal {
     grid-area: hS; }
   #bodySucursal #mainSucursal {
-    grid-area: mS; }
+    grid-area: mS;
+    margin-top: 2em; }
     #bodySucursal #mainSucursal h1 {
       text-align: center;
       color: #e744ab; }
@@ -588,7 +607,7 @@
     #bodySucursal #mainSucursal {
       padding: 1em; }
       #bodySucursal #mainSucursal #sectionSuc {
-        max-width: 768px; }
+        max-width: 100%; }
         #bodySucursal #mainSucursal #sectionSuc div {
           margin: 1em;
           width: 300px;

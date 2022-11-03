@@ -13,6 +13,10 @@
     #mainProductos {
         grid-area: mpro;
         padding: ($padding*3);
+        h1 {
+            color: $colortitle;
+            text-align: center;
+        }
 
         section {
 
@@ -22,29 +26,25 @@
 
             .contenedorImg {
                 padding: $padding;
-                &:hover{
-                    transform: rotateY(180dsg);
-                    
-                }
 
                 .divImg {
                     width: 240px;
                     height: 370px;
                     position: relative;
-                    transform-style: preserve-3d;
-
-                    
 
                     .divImg1, .divImg2 {
                         width: 100%;
                         height: 100%;
                         position: absolute;
-                        backface-visibility: hidden;
-                        transform-style: preserve-3d;
-
                     }
+
                     .divImg2{
-                        transform: rotateY(180dsg);
+                        opacity: 0;
+
+                        &:hover{
+                            opacity: 10;
+                            transition: .5s ease-out;
+                        }
                     }
 
                 }
@@ -81,13 +81,14 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width:1024px) {
     #bodyProductos {
         @include gridAuto;
         height: auto;
 
-        header {
+        .headerPages {
             height: 50px;
+            z-index: 1;
         }
 
         main {
@@ -101,11 +102,19 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 320px), (max-width:450px) {
     #bodyProductos {
+        .headerPages{
+            z-index: 1;
+        }
         #mainProductos {
             margin-top: 3em;
             padding: 0;
+            section {
+                .divImg1,.divImg2{
+                    position: static;
+                }
+            }
         }
     }
 }
